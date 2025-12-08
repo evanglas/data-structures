@@ -105,6 +105,11 @@ public:
         return size_ == 0;
     }
 
+    size_t capacity() const
+    {
+        return capacity_;
+    }
+
 private:
     // TODO: can improve this by using uninitialized_copy/uninitialized_move
     // as well as ::operator new, ::operator delete.
@@ -130,6 +135,7 @@ private:
 
         delete[] items_;
         items_ = moreItems;
+        capacity_ = newCapacity;
     };
     size_t size_;
     size_t capacity_;
