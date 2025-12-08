@@ -5,7 +5,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-add_executable(tests test_stack.cpp)
+add_executable(tests test_stack.cpp test_queue.cpp)
 
 target_link_libraries(tests DataStructures GTest::gtest_main)
 
